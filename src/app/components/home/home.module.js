@@ -5,15 +5,12 @@ import './home.scss';
 const HomeModule = angular
   .module('home', [])
   .component('home', HomeComponent)
-  .config($stateProvider => {
+  .config(($stateProvider) => {
     'ngInject';
     $stateProvider
       .state('home', {
         url: '/',
-        component: 'home',
-        ncyBreadcrumb: {
-          label: 'Home'
-        }
+        component: 'home'
       });
   })
   .name;
