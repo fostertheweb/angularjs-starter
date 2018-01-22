@@ -3,7 +3,7 @@ import HomeModule from './home/home.module';
 
 const ComponentsModule = angular
   .module('app.components', [
-    HomeModule,
+    HomeModule
   ])
   .name;
 
