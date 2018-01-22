@@ -1,0 +1,160 @@
+@import "../../../sass/variables";
+
+/** TOP HEADER **/
+img#smart-logo{
+  height: 33px;
+  width: 157px;
+  padding-top: 5px;
+}
+img#clinic-logo{
+  height: 22px;
+  width: 142px;
+  margin-right: 10px
+}
+#top-header>div{
+  display: flex;
+}
+#top-header #header-middle{
+  flex: 1;
+  border-right: 1px $border-gray solid;
+  border-left: 1px $border-gray solid;
+}
+#top-header #header-left, #top-header #header-middle, #top-header #header-right{
+  padding: 10px 20px;
+}
+#top-header .dropdown-menu{
+  min-width: 180px;
+  right: 0;
+  left: auto;
+  padding: 0;
+}
+#top-header button#user-dropdown {
+    min-width: 100px;
+    text-align: left;
+}
+#new-event-button{
+  padding: 6px 32px;
+}
+/* Disable the left side of the user button */
+#top-header #user-dropdown{
+  &:hover, :active {
+    cursor: inherit;
+    box-shadow: none;
+  }
+}
+/* BOTTOM HEADER **/
+#bottom-header{
+  background-color: $orange;
+  padding: 10px 25px;
+  border-width: 0;
+  &.row {
+    border-top: 1px $border-gray solid;
+  }
+  i.fa.fa-home{
+    float: left;
+    padding-right: 5px;
+    color: $white;
+    font-weight: 200;
+    padding-top: 4.5px;
+  }
+  .breadcrumb {
+    padding: 0;
+    margin-bottom: 0;
+    list-style: none;
+    background-color: transparent;
+    border-radius: 0;
+  }
+  .breadcrumb>li, #bottom-header .breadcrumb>.active {
+    a, span, &:before{
+      font-weight: 300;
+      font-size: 11px;
+      color: $white;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+  }
+}
+#top-header{
+  &.row {
+    border-top: 1px $border-gray solid;
+  }
+  i.fa.fa-bell-o{
+    font-size: 21px;
+    top: 1px;
+    padding: 5px 8px 5px 4px;
+    margin-right: -8px;
+    &:hover:before{
+      content: "\f0f3";
+      color: $orange;
+    }
+    &:hover{
+      cursor: pointer;
+    }
+    &.active:before{
+      content: "\f0f3";
+      color: $orange;
+    }
+  }
+  #settings{
+    font-size: 21px;
+    padding-right: 4px;
+    border: 0;
+    background-color: transparent;
+    &:active, &:hover, .btn[aria-expanded="true"]{
+      box-shadow: none;
+      border: none;
+    }
+
+    i {
+      &.active:before, &:hover:before{
+        color: $orange;
+      }
+    }
+  }
+  .btn-group.open #settings.dropdown-toggle{
+    box-shadow: none;
+    border: none;
+    i {
+      color: $orange;
+    }
+  }
+  i.fa.fa-bars{
+    color: $font-black;
+    font-size: 25px;
+    padding: 2px 8px;
+    opacity: .8;
+    &:hover{
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
+  .dropdown-menu li {
+    font-size: 14px;
+    a{
+      border-bottom: 1px $border-gray solid;
+      padding: 6px 16px;
+    }
+    &:last-child{
+      a{
+        border-bottom-width: 0;
+      }
+    }
+    &:hover{
+      a, .fa{
+        background-color: $orange;
+        color: $white;
+      }
+
+    }
+    i.fa{
+      font-size: 14px;
+      padding-right: 6px;
+    }
+  }
+  .btn-group{
+    margin-top: -3px;
+  }
+  .btn-group>.btn:first-child:not(:last-child):not(.dropdown-toggle) {
+    border-right-width: 0;
+  }
+}

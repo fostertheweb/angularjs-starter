@@ -1,0 +1,60 @@
+<div class="container-fluid">
+
+  <!-- TOP HEADER -->
+  <div class="row"  id="top-header">
+
+    <div class="col-xs-12">
+
+      <!-- Left Section -->
+      <div id="header-left">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </div>
+
+      <!-- Middle Section -->
+      <div id="header-middle">
+        <img src="../../../images/smart-logo.png" id="smart-logo"/>
+      </div>
+
+      <!-- Right Section -->
+      <div id="header-right" ng-if="$ctrl.user.displayName">
+
+        <img id="clinic-logo" ng-if="$ctrl.clinicImageUrl" ng-src="{{$ctrl.clinicImageUrl}}"  onerror="this.src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='"/>
+        <!-- Split button -->
+        <div class="btn-group" uib-dropdown>
+          <button id="user-dropdown" type="button" class="btn btn-default">{{$ctrl.user.displayName}}</button>
+          <button type="button" class="btn btn-default" uib-dropdown-toggle>
+            <span class="caret"></span>
+            <span class="sr-only"></span>
+          </button>
+          <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="user-dropdown">
+            <!-- Close the tab when this is clicked -->
+              <li role="menuitem" id="exit-button"><a ng-click="$ctrl.exit()"><i class="fa fa-sign-out" aria-hidden="true"></i> Sign Out</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bell-o" ng-class="$ctrl.location.path() == '/notifications' ? 'active' : ''" aria-hidden="true" ng-if="$ctrl.user.displayName"></i>
+        <div class="btn-group" uib-dropdown>
+          <button id="settings" type="button" class="btn btn-default" uib-dropdown-toggle>
+            <i class="fa fa-cog" aria-hidden="true"></i>
+          </button>
+          <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="settings">
+            <li role="menuitem"><a href="#"><i class="fa fa-cog" aria-hidden="true"></i> Settings</a></li>
+            <li role="menuitem" ng-if="$ctrl.canEditWorkshift" ><a ng-click="$ctrl.openShiftsModal()"><i class="fa fa-clock-o" aria-hidden="true"></i> Work Shift</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div><!-- end col -->
+
+  </div><!-- end row -->
+
+  <!-- BOTTOM HEADER -->
+  <div class="row" id="bottom-header">
+
+    <div class="col-xs-12">
+      <i class="fa fa-home" aria-hidden="true"></i>
+      <div ncy-breadcrumb></div>
+    </div><!-- end col -->
+
+  </div><!-- end row -->
+
+</div><!-- end container -->
