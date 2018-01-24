@@ -44,3 +44,7 @@ View all available commands:
 npm run
 ```
 
+### Environment Variables & `.env`
+
+Any variables defined in `.env` within the project's root directory will be read by webpack and converted to their corresponding value within the compiled bundle. This will allow you to specify any environment specific configuration, such as, an API URL.
+
