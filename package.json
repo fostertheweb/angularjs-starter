@@ -1,11 +1,11 @@
 {
   "name": "angularjs-starter",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": "Jonathan Foster <jonathan.foster@eagledream.com>",
   "license": "MIT",
   "dependencies": {
     "@uirouter/angularjs": "^1.0.12",
-    "angular": "^1.6.2",
+    "angular": "^1.6.9",
     "angular-ui-bootstrap": "^2.5.6",
     "bootstrap": "^3.3.7",
     "font-awesome": "^4.7.0",
@@ -17,7 +17,7 @@
     "@types/angular-ui-router": "^1.1.36",
     "@types/jquery": "^2.0.40",
     "angular-mocks": "^1.6.2",
-    "angularjs-scripts": "git+https://github.com/fostertheweb/angularjs-scripts.git#v0.4.4",
+    "angularjs-scripts": "git+https://github.com/fostertheweb/angularjs-scripts.git#v0.4.5",
     "jasmine": "^2.5.3"
   },
   "scripts": {
